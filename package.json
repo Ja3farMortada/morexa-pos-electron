@@ -1,6 +1,6 @@
 {
     "name": "morexa-pos",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Morexa POS",
     "main": "main.js",
     "scripts": {
@@ -9,7 +9,7 @@
     },
     "build": {
         "appId": "com.binariez.Ja3farMortada.morexa-pos-electron",
-        "productName": "Morexa",
+        "productName": "Morexa POS",
         "target": "NSIS",
         "win": {
         "target": "nsis"

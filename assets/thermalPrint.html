@@ -52,7 +52,8 @@
     <body ng-app="printApp" ng-controller="printController">
         <div class="print-section">
             <!-- title -->
-            <!-- <h4 class="text-center"></h4> -->
+            <h4 class="text-center">{{ invoice.settings.brand_name }}</h4>
+            <h6 class="text-center">{{ invoice.settings.phone_1 }}</h6>
 
             <div>-------------------------------------------------------</div>
 
@@ -63,9 +64,9 @@
             </div>
 
             <!-- customer name if exists -->
-            <p ng-show="invoice.customer_name">
+            <!-- <p ng-show="invoice.customer_name">
                 Billed To: {{ invoice.customer_name }}
-            </p>
+            </p> -->
 
             <!-- invoice number -->
             <h6 class="text-center">
@@ -101,7 +102,7 @@
                 Total: {{ invoice.total_amount | currency }}
             </h6>
 
-            <br /><br />
+            <br />
 
             <!-- thank msg -->
             <p>Thank you for choosing us.</p>

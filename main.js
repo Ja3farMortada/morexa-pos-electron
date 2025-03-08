@@ -97,7 +97,7 @@ ipcMain.handle("thermal-print", async (event, data) => {
 
     const printOptions = {
         silent: true,
-        deviceName: "XP-80C",
+        deviceName: data.printer || "XP-80C",
         marginsType: 0,
     };
     thermalWindow.webContents.on("did-finish-load", async function () {
