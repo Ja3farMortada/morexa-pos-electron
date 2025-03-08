@@ -1,11 +1,11 @@
 {
     "name": "morexa-pos",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Morexa POS",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "build": "electron-builder --x64 --win"
+        "build": "rm -rf dist && electron-builder --x64 --win"
     },
     "build": {
         "appId": "com.binariez.Ja3farMortada.morexa-pos-electron",
