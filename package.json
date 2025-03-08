@@ -1,28 +1,31 @@
 {
     "name": "morexa-pos",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "description": "Morexa POS",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "build": "rm -rf dist && electron-builder --x64 --win"
+        "build": "rm -rf dist && electron-builder --x64 --win --publish always"
     },
     "build": {
         "appId": "com.binariez.Ja3farMortada.morexa-pos-electron",
         "productName": "Morexa POS",
+        "artifactName": "${name}-${version}.${ext}",
         "target": "NSIS",
         "win": {
-        "target": "nsis"
+            "target": "nsis"
         },
         "publish": [
             {
                 "provider": "github",
                 "owner": "Ja3farMortada",
-                "repo": "morexa-pos-electron"
+                "repo": "morexa-pos-electron",
+                "token": "${env.GH_TOKEN}",
+                "releaseType": "release"
             }
         ],
         "extraResources": [
-        "./server"
+            "./server"
         ],
         "npmRebuild": "false",
         "directories": {
@@ -38,6 +41,7 @@
     "dependencies": {
         "angular": "^1.8.3",
         "bootstrap": "^5.3.3",
+        "dotenv": "^16.4.7",
         "electron-context-menu": "^3.6.1",
         "electron-log": "^4.4.8",
         "electron-updater": "^6.1.1",
