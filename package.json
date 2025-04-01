@@ -1,10 +1,11 @@
 {
     "name": "morexa-pos",
-    "version": "1.0.6",
+    "version": "1.0.9",
     "description": "Morexa POS",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
+        "test": "rm -rf dist && electron-builder --x64 --win",
         "build": "rm -rf dist && electron-builder --x64 --win --publish always"
     },
     "build": {
@@ -20,7 +21,6 @@
                 "provider": "github",
                 "owner": "Ja3farMortada",
                 "repo": "morexa-pos-electron",
-                "token": "${env.GH_TOKEN}",
                 "releaseType": "release"
             }
         ],
